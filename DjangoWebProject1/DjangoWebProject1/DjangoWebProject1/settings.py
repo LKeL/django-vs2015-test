@@ -1,9 +1,12 @@
-"""
+﻿"""
 Django settings for DjangoWebProject1 project.
 """
 
 from os import path
+
+
 PROJECT_ROOT = path.dirname(path.abspath(path.dirname(__file__)))
+
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -20,12 +23,15 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': path.join(PROJECT_ROOT, 'db.sqlite3'),
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
+        'NAME': 'djangodataservice',
+        'ENGINE': 'django.db.backends.mysql',
+        'USER': 'root',
+        'PASSWORD': 'qwe2020115',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'OPTIONS': {
+          'autocommit': True,
+        },
     }
 }
 
@@ -131,8 +137,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
+    'polls',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )

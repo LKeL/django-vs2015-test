@@ -37,6 +37,13 @@
     <Compile Include="DjangoWebProject1\settings.py" />
     <Compile Include="DjangoWebProject1\urls.py" />
     <Compile Include="DjangoWebProject1\wsgi.py" />
+    <Compile Include="polls\admin.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="polls\models.py" />
+    <Compile Include="polls\tests.py" />
+    <Compile Include="polls\views.py" />
+    <Compile Include="polls\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\" />
@@ -48,10 +55,12 @@
     <Folder Include="app\templates\" />
     <Folder Include="app\templates\app\" />
     <Folder Include="DjangoWebProject1\" />
+    <Folder Include="polls\" />
+    <Folder Include="polls\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="polls\templates\index.html" />
     <Content Include="requirements.txt" />
-    <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
     <Content Include="app\static\app\content\bootstrap.min.css" />
     <Content Include="app\static\app\content\site.css" />
