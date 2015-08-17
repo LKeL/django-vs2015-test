@@ -5,6 +5,7 @@
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #555;
+  background-color: #E6E6E6;
 }
 
 h1, .h1,
@@ -112,6 +113,7 @@ h6, .h6 {
   margin-top: 20px;
   font-size: 18px;
   line-height: 1.5;
+  background-color: white;
 }
 
 /* Sidebar modules for boxing content */
@@ -170,7 +172,7 @@ h6, .h6 {
   color: #999;
   text-align: center;
   background-color: #f9f9f9;
-  border-top: 1px solid #e5e5e5;
+  border-top: 20px solid #e5e5e5;
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
