@@ -1,0 +1,79 @@
+﻿{% extends "mysite/layout.html" %}
+{% block content %}
+{% load staticfiles %}
+<link href="{% static 'mysite/css/home.css' %}" rel="stylesheet">
+<div class="container">
+    <div class="blog-header">
+        <div class="row">
+            <div class="col-sm-8 blog-main archive">
+                    <div id="archives">   
+	                    <header class="blog-post">
+		                    <div class="blog-post-info">
+			                    <span class="blog-post-date">
+                                    <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+				                    {{article.publish_time.year}}年{{article.publish_time.month}}月{{article.publish_time.day}}日
+			                    </span>
+		 	                    <span class="author vcard">
+                                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+		 		                    heartblood 	
+                                </span>
+		  	                    <span class="blog-post-comments-link">
+  				                    <span class="ds-thread-count" data-thread-key="{{article.id}}"></span>
+			                    </span>
+		                    </div>						
+		                    <h1 class="blog-post-title"> 
+                                {{article.title}}
+		                    </h1>
+	 	                    <div class="post-format-indicator">
+			                    <a class="entry-format"></a>
+		                    </div>
+ 	                    </header>
+	                    <div>  	
+			                {{ article.content|safe }}
+			                <div class="clearfix"></div>
+	                    </div><!-- .entry-content -->
+	                <footer class="blog-post-footer">
+	                    <div class="fenlei">
+		                    <span class="entry-categories">
+                	            <span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span> 
+			                    <a href="{% url 'classfiDetail' classfi=article.classification %}" rel="category">{{article.classification}}</a>
+		                    </span>
+		                    <span class="entry-tags">        
+                                <span class="glyphicon glyphicon-tags" aria-hidden="true"></span> 
+                                {% for i in article.get_tags %}          
+                                    <a href="{{ i.get_absolute_url }}" rel="tag"> {{i}}</a>
+                                {% endfor %}
+                            </span>
+                        </div>
+	                </footer>      
+                </div>
+                <div class="pagination">
+                    {% if article.get_before_article %}
+                        {% with before=article.get_before_article %}
+                            <p class="p1">上一篇 <a href="{{ before.get_absolute_url }}">{{before}} </a></p>
+                        {% endwith %}
+                    {% else %}
+                        <p class="p1">没有上一篇啦</p>
+     	            {% endif %}
+                    <p class="packing"></p>
+	                {% if article.get_after_article %}
+                        {% with after=article.get_after_article %}
+                            <p class="p2">下一篇 <a href="{{ after.get_absolute_url }}">{{after}} </a></p> 
+  		                {% endwith %}
+                    {% else %}
+                        <p class="p2">没有下篇啦</p>
+     	            {% endif %}
+                    
+                </div>
+                <div class="comments">
+                    {% include "mysite/_comments.html" %}
+                </div>
+               
+            </div> 
+            
+        </div> 
+    </div> 
+</div> 
+
+
+{% endblock %}

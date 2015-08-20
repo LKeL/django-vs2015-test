@@ -37,6 +37,16 @@
     <Compile Include="DjangoWebProject1\settings.py" />
     <Compile Include="DjangoWebProject1\urls.py" />
     <Compile Include="DjangoWebProject1\wsgi.py" />
+    <Compile Include="mysite\admin.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mysite\models.py" />
+    <Compile Include="mysite\tests.py" />
+    <Compile Include="mysite\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mysite\views.py" />
+    <Compile Include="mysite\__init__.py" />
     <Compile Include="polls\admin.py">
       <SubType>Code</SubType>
     </Compile>
@@ -55,10 +65,199 @@
     <Folder Include="app\templates\" />
     <Folder Include="app\templates\app\" />
     <Folder Include="DjangoWebProject1\" />
+    <Folder Include="mysite\" />
+    <Folder Include="mysite\static\" />
+    <Folder Include="mysite\static\mysite\" />
+    <Folder Include="mysite\static\mysite\css\" />
+    <Folder Include="mysite\static\mysite\fonts\" />
+    <Folder Include="mysite\static\mysite\js\" />
+    <Folder Include="mysite\static\tinymce\" />
+    <Folder Include="mysite\static\tinymce\langs\" />
+    <Folder Include="mysite\static\tinymce\plugins\" />
+    <Folder Include="mysite\static\tinymce\plugins\advlist\" />
+    <Folder Include="mysite\static\tinymce\plugins\anchor\" />
+    <Folder Include="mysite\static\tinymce\plugins\autolink\" />
+    <Folder Include="mysite\static\tinymce\plugins\autoresize\" />
+    <Folder Include="mysite\static\tinymce\plugins\autosave\" />
+    <Folder Include="mysite\static\tinymce\plugins\bbcode\" />
+    <Folder Include="mysite\static\tinymce\plugins\charmap\" />
+    <Folder Include="mysite\static\tinymce\plugins\code\" />
+    <Folder Include="mysite\static\tinymce\plugins\colorpicker\" />
+    <Folder Include="mysite\static\tinymce\plugins\contextmenu\" />
+    <Folder Include="mysite\static\tinymce\plugins\directionality\" />
+    <Folder Include="mysite\static\tinymce\plugins\emoticons\" />
+    <Folder Include="mysite\static\tinymce\plugins\emoticons\img\" />
+    <Folder Include="mysite\static\tinymce\plugins\example\" />
+    <Folder Include="mysite\static\tinymce\plugins\example_dependency\" />
+    <Folder Include="mysite\static\tinymce\plugins\fullpage\" />
+    <Folder Include="mysite\static\tinymce\plugins\fullscreen\" />
+    <Folder Include="mysite\static\tinymce\plugins\hr\" />
+    <Folder Include="mysite\static\tinymce\plugins\imagetools\" />
+    <Folder Include="mysite\static\tinymce\plugins\image\" />
+    <Folder Include="mysite\static\tinymce\plugins\importcss\" />
+    <Folder Include="mysite\static\tinymce\plugins\insertdatetime\" />
+    <Folder Include="mysite\static\tinymce\plugins\layer\" />
+    <Folder Include="mysite\static\tinymce\plugins\legacyoutput\" />
+    <Folder Include="mysite\static\tinymce\plugins\link\" />
+    <Folder Include="mysite\static\tinymce\plugins\lists\" />
+    <Folder Include="mysite\static\tinymce\plugins\media\" />
+    <Folder Include="mysite\static\tinymce\plugins\nonbreaking\" />
+    <Folder Include="mysite\static\tinymce\plugins\noneditable\" />
+    <Folder Include="mysite\static\tinymce\plugins\pagebreak\" />
+    <Folder Include="mysite\static\tinymce\plugins\paste\" />
+    <Folder Include="mysite\static\tinymce\plugins\preview\" />
+    <Folder Include="mysite\static\tinymce\plugins\print\" />
+    <Folder Include="mysite\static\tinymce\plugins\save\" />
+    <Folder Include="mysite\static\tinymce\plugins\searchreplace\" />
+    <Folder Include="mysite\static\tinymce\plugins\spellchecker\" />
+    <Folder Include="mysite\static\tinymce\plugins\tabfocus\" />
+    <Folder Include="mysite\static\tinymce\plugins\table\" />
+    <Folder Include="mysite\static\tinymce\plugins\template\" />
+    <Folder Include="mysite\static\tinymce\plugins\textcolor\" />
+    <Folder Include="mysite\static\tinymce\plugins\textpattern\" />
+    <Folder Include="mysite\static\tinymce\plugins\visualblocks\" />
+    <Folder Include="mysite\static\tinymce\plugins\visualblocks\css\" />
+    <Folder Include="mysite\static\tinymce\plugins\visualchars\" />
+    <Folder Include="mysite\static\tinymce\plugins\wordcount\" />
+    <Folder Include="mysite\static\tinymce\skins\" />
+    <Folder Include="mysite\static\tinymce\skins\lightgray\" />
+    <Folder Include="mysite\static\tinymce\skins\lightgray\fonts\" />
+    <Folder Include="mysite\static\tinymce\skins\lightgray\img\" />
+    <Folder Include="mysite\static\tinymce\themes\" />
+    <Folder Include="mysite\static\tinymce\themes\modern\" />
+    <Folder Include="mysite\templates\" />
+    <Folder Include="mysite\templates\mysite\" />
     <Folder Include="polls\" />
     <Folder Include="polls\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="mysite\static\mysite\css\.DS_Store" />
+    <Content Include="mysite\static\mysite\css\._.DS_Store" />
+    <Content Include="mysite\static\mysite\css\home.css" />
+    <Content Include="mysite\static\mysite\css\bootstrap-theme.css" />
+    <Content Include="mysite\static\mysite\css\bootstrap-theme.css.map" />
+    <Content Include="mysite\static\mysite\css\bootstrap-theme.min.css" />
+    <Content Include="mysite\static\mysite\css\bootstrap.css" />
+    <Content Include="mysite\static\mysite\css\bootstrap.css.map" />
+    <Content Include="mysite\static\mysite\css\bootstrap.min.css" />
+    <Content Include="mysite\static\mysite\css\index.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="mysite\static\mysite\css\layout.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="mysite\static\mysite\css\post.png" />
+    <Content Include="mysite\static\mysite\css\tinymce.css" />
+    <Content Include="mysite\static\mysite\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="mysite\static\mysite\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="mysite\static\mysite\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="mysite\static\mysite\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="mysite\static\mysite\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="mysite\static\mysite\js\.DS_Store" />
+    <Content Include="mysite\static\mysite\js\._.DS_Store" />
+    <Content Include="mysite\static\mysite\js\bootstrap.js" />
+    <Content Include="mysite\static\mysite\js\bootstrap.min.js" />
+    <Content Include="mysite\static\mysite\js\ie-emulation-modes-warning.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="mysite\static\mysite\js\ie10-viewport-bug-workaround.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="mysite\static\mysite\js\npm.js" />
+    <Content Include="mysite\static\tinymce\config.js" />
+    <Content Include="mysite\static\tinymce\langs\readme.md" />
+    <Content Include="mysite\static\tinymce\license.txt" />
+    <Content Include="mysite\static\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\colorpicker\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="mysite\static\tinymce\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="mysite\static\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="mysite\static\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="mysite\static\tinymce\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="mysite\static\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="mysite\static\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="mysite\static\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="mysite\static\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="mysite\static\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="mysite\static\tinymce\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="mysite\static\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="mysite\static\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="mysite\static\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="mysite\static\tinymce\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="mysite\static\tinymce\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="mysite\static\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\example\dialog.html" />
+    <Content Include="mysite\static\tinymce\plugins\example\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\example_dependency\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\imagetools\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\layer\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\media\moxieplayer.swf" />
+    <Content Include="mysite\static\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\textpattern\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="mysite\static\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="mysite\static\tinymce\skins\lightgray\content.inline.min.css" />
+    <Content Include="mysite\static\tinymce\skins\lightgray\content.min.css" />
+    <Content Include="mysite\static\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
+    <Content Include="mysite\static\tinymce\skins\lightgray\fonts\tinymce-small.svg" />
+    <Content Include="mysite\static\tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
+    <Content Include="mysite\static\tinymce\skins\lightgray\fonts\tinymce-small.woff" />
+    <Content Include="mysite\static\tinymce\skins\lightgray\fonts\tinymce.eot" />
+    <Content Include="mysite\static\tinymce\skins\lightgray\fonts\tinymce.svg" />
+    <Content Include="mysite\static\tinymce\skins\lightgray\fonts\tinymce.ttf" />
+    <Content Include="mysite\static\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="mysite\static\tinymce\skins\lightgray\img\anchor.gif" />
+    <Content Include="mysite\static\tinymce\skins\lightgray\img\loader.gif" />
+    <Content Include="mysite\static\tinymce\skins\lightgray\img\object.gif" />
+    <Content Include="mysite\static\tinymce\skins\lightgray\img\trans.gif" />
+    <Content Include="mysite\static\tinymce\skins\lightgray\skin.ie7.min.css" />
+    <Content Include="mysite\static\tinymce\skins\lightgray\skin.min.css" />
+    <Content Include="mysite\static\tinymce\themes\modern\theme.min.js" />
+    <Content Include="mysite\static\tinymce\tinymce.min.js" />
+    <Content Include="mysite\templates\mysite\content.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="mysite\templates\mysite\home.html" />
+    <Content Include="mysite\templates\mysite\index.html" />
+    <Content Include="mysite\templates\mysite\layout.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="mysite\templates\mysite\_comments.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="polls\templates\index.html" />
     <Content Include="requirements.txt" />
     <Content Include="app\static\app\content\bootstrap.css" />

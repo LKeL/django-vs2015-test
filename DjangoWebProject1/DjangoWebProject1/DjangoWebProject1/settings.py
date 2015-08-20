@@ -6,7 +6,7 @@ from os import path
 
 
 PROJECT_ROOT = path.dirname(path.abspath(path.dirname(__file__)))
-
+STATIC_URL = PROJECT_ROOT + 'static'
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -20,6 +20,7 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
+
 
 DATABASES = {
     'default': {
@@ -65,12 +66,12 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = ''
 
+MEDIA_ROOT = path.join(PROJECT_ROOT,'media')
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = '/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -127,9 +128,18 @@ TEMPLATE_DIRS = (
     # "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    path.join(PROJECT_ROOT, "templates/"),
 )
 
+
+
+
+
 INSTALLED_APPS = (
+    'grappelli.dashboard',
+    'grappelli',
+    #'tinymce',
+
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -138,12 +148,37 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'app',
     'polls',
+    'mysite',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
 
+
+# grappelli
+ADMIN_MEDIA_PREFIX = STATIC_URL + 'grappelli/'
+GRAPPELLI_INDEX_DASHBOARD = 'DjangoWebProject1.dashboard.CustomIndexDashboard'  
+TEMPLATE_CONTEXT_PROCESSORS = (  
+    "django.contrib.auth.context_processors.auth",  
+    "django.core.context_processors.request",  
+    "django.core.context_processors.i18n",  
+    "django.contrib.messages.context_processors.messages",  
+)  
+
+'''
+#  tinymce
+TINYMCE_DEFAULT_CONFIG = {  
+    'theme': 'advanced',   
+    'theme_advanced_toolbar_location' : 'top',  
+    'theme_advanced_toolbar_align' : 'left',   
+    'width': 700,  
+    'height': 500,  
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 10,
+
+}  
+'''
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.
